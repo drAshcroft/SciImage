@@ -79,12 +79,14 @@ namespace SciImage.PaintForms.ToolsForm
                 {
                     ToolMenuInfo toolInfo = toolInfos[i];
                     ToolStripButton button = new ToolStripButton();
+                    if (toolInfo.Image != null)
+                    {
+                        int imageIndex = imageList.Images.Add(
+                            toolInfo.Image.Reference,
+                            imageList.TransparentColor);
 
-                    int imageIndex = imageList.Images.Add(
-                        toolInfo.Image.Reference,
-                        imageList.TransparentColor);
-
-                    button.ImageIndex = imageIndex;
+                        button.ImageIndex = imageIndex;
+                    }
                     button.Tag = toolInfo.ToolType;
                     button.ToolTipText = string.Format(toolTipFormat, toolInfo.Name, char.ToUpperInvariant(toolInfo.HotKey).ToString());
                     buttons.Add( button);

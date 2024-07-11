@@ -39,6 +39,10 @@ namespace SciImage.Plugins.Tools
         public  Tool CreateTool(Type toolType, DocumentWorkspace dc)
         {
             ConstructorInfo ci = toolType.GetConstructor(new Type[] { typeof(DocumentWorkspace) });
+            if (ci == null)
+            {
+                throw new ArgumentException("Tool must have a constructor that takes a DocumentWorkspace");
+            }
             Tool tool = (Tool)ci.Invoke(new object[] { dc });
             return tool;
         }

@@ -70,8 +70,12 @@ namespace SciImage_Actions.Actions.File_Actions
 
             try
             {
-                oldLatency = FormsManager.Manager.DocumentStrip.ThumbnailUpdateLatency;
-                FormsManager.Manager.DocumentStrip.ThumbnailUpdateLatency = 0;
+                if (FormsManager.Manager.DocumentStrip != null)
+                {
+
+                    oldLatency = FormsManager.Manager.DocumentStrip.ThumbnailUpdateLatency;
+                    FormsManager.Manager.DocumentStrip.ThumbnailUpdateLatency = 0;
+                }
             }
 
             catch (NullReferenceException)
@@ -159,6 +163,7 @@ namespace SciImage_Actions.Actions.File_Actions
 
             try
             {
+                if (FormsManager.Manager.DocumentStrip != null)
                 FormsManager.Manager.DocumentStrip.ThumbnailUpdateLatency = oldLatency;
             }
 
@@ -170,7 +175,8 @@ namespace SciImage_Actions.Actions.File_Actions
 
             UI.SuspendControlPainting(FormsManager.BaseForm);
 
-            foreach (DocumentWorkspace dw in DocumentManager.Manager.DocumentWorkspaces)
+            var workspaces = DocumentManager.Manager.DocumentWorkspaces.ToArray();
+            foreach (DocumentWorkspace dw in workspaces)
             {
                 DocumentManager.Manager.RemoveDocumentWorkspace(dw);
             }
