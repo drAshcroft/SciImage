@@ -1,4 +1,0 @@
-LIBRARY ShellExtension
-EXPORTS
-DllCanUnloadNow PRIVATE
-DllGetClassObject PRIVATE

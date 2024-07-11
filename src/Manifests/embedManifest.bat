@@ -1,1 +1,0 @@
-mt.exe -nologo -manifest %2 %3 %4 "-outputresource:%1"

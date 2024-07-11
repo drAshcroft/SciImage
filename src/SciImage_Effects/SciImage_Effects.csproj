@@ -1,0 +1,406 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{8BF0AC2A-4EC5-4F18-BF8A-DB5FA49CBEC0}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SciImage_Effects</RootNamespace>
+    <AssemblyName>SciImage_Effects</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="gTrackBar">
+      <HintPath>..\3rd Party\gTrackBar\bin\Release\gTrackBar.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Adjustments\BrightnessAndContrastForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Adjustments\BrightnessAndContrastForm.Designer.cs">
+      <DependentUpon>BrightnessAndContrastForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Artistics\PencilSketchForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Artistics\PencilSketchForm.Designer.cs">
+      <DependentUpon>PencilSketchForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Artistics\OilPaintingForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Artistics\OilPaintingForm.Designer.cs">
+      <DependentUpon>OilPaintingForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Artistics\InkSketchForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Artistics\InkSketchForm.Designer.cs">
+      <DependentUpon>InkSketchForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Blurs\UnfocusForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Blurs\UnfocusForm.Designer.cs">
+      <DependentUpon>UnfocusForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Blurs\TempRotateZoomForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Blurs\TempRotateZoomForm.Designer.cs">
+      <DependentUpon>TempRotateZoomForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Blurs\RadialBlurForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Blurs\RadialBlurForm.Designer.cs">
+      <DependentUpon>RadialBlurForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Blurs\MotionBlurForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Blurs\MotionBlurForm.Designer.cs">
+      <DependentUpon>MotionBlurForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Blurs\GuassianBlurForm1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Blurs\GuassianBlurForm1.Designer.cs">
+      <DependentUpon>GuassianBlurForm1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Blurs\ZoomBlurForm2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Blurs\ZoomBlurForm2.Designer.cs">
+      <DependentUpon>ZoomBlurForm2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Blurs\FragmentForm3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Blurs\FragmentForm3.Designer.cs">
+      <DependentUpon>FragmentForm3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Distort\BulgeForm2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Distort\BulgeForm2.Designer.cs">
+      <DependentUpon>BulgeForm2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Distort\TwistForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Distort\TwistForm.Designer.cs">
+      <DependentUpon>TwistForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Distort\TileForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Distort\TileForm.Designer.cs">
+      <DependentUpon>TileForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Distort\PolarInversionForm4.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Distort\PolarInversionForm4.Designer.cs">
+      <DependentUpon>PolarInversionForm4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Distort\FrostedGlassForm3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Distort\FrostedGlassForm3.Designer.cs">
+      <DependentUpon>FrostedGlassForm3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Distort\PixelateForm1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Distort\PixelateForm1.Designer.cs">
+      <DependentUpon>PixelateForm1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Histograms\HistogramLuminosity.cs" />
+    <Compile Include="Histograms\HistogramRGB.cs" />
+    <Compile Include="Adjustments\PosterizeAdjustmentForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Adjustments\PosterizeAdjustmentForm.Designer.cs">
+      <DependentUpon>PosterizeAdjustmentForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Adjustments\HueAndSaturationForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Adjustments\HueAndSaturationForm.Designer.cs">
+      <DependentUpon>HueAndSaturationForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Noise\AddNoiseEffect.cs" />
+    <Compile Include="Adjustments\AutoLevelEffect.cs" />
+    <Compile Include="Adjustments\BrightnessAndContrastAdjustment.cs" />
+    <Compile Include="Distort\BulgeEffect.cs" />
+    <Compile Include="Abstracts\ColorDifferenceEffect.cs" />
+    <Compile Include="Noise\ReduceNoiseForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Noise\ReduceNoiseForm.Designer.cs">
+      <DependentUpon>ReduceNoiseForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Noise\MedianForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Noise\MedianForm.Designer.cs">
+      <DependentUpon>MedianForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Noise\AddNoiseForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Noise\AddNoiseForm.Designer.cs">
+      <DependentUpon>AddNoiseForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Photo\SoftenPortraitForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Photo\SoftenPortraitForm.Designer.cs">
+      <DependentUpon>SoftenPortraitForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Photo\RedEyeRemoveForm2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Photo\RedEyeRemoveForm2.Designer.cs">
+      <DependentUpon>RedEyeRemoveForm2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Photo\GlowForm3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Photo\GlowForm3.Designer.cs">
+      <DependentUpon>GlowForm3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Photo\SharpenForm1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Photo\SharpenForm1.Designer.cs">
+      <DependentUpon>SharpenForm1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Render\JuliaFractalForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Render\JuliaFractalForm.Designer.cs">
+      <DependentUpon>JuliaFractalForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Render\MandelbrotFractalForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Render\MandelbrotFractalForm.Designer.cs">
+      <DependentUpon>MandelbrotFractalForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Stylize\ReliefForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Stylize\ReliefForm.Designer.cs">
+      <DependentUpon>ReliefForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Stylize\EmbossForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Stylize\EmbossForm.Designer.cs">
+      <DependentUpon>EmbossForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Stylize\OutlineForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Stylize\OutlineForm.Designer.cs">
+      <DependentUpon>OutlineForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Stylize\EdgeDetectForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Stylize\EdgeDetectForm.Designer.cs">
+      <DependentUpon>EdgeDetectForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Testing\ColorFillEffect.cs" />
+    <Compile Include="Abstracts\ConvolutionFilterEffect.cs" />
+    <Compile Include="Adjustments\DesaturateEffect.cs" />
+    <Compile Include="Stylize\EdgeDetectEffect.cs" />
+    <Compile Include="Stylize\EmbossEffect.cs" />
+    <Compile Include="Blurs\FragmentEffect.cs" />
+    <Compile Include="Distort\FrostedGlassEffect.cs" />
+    <Compile Include="Blurs\GaussianBlurEffect.cs" />
+    <Compile Include="Photo\GlowEffect.cs" />
+    <Compile Include="Adjustments\HueAndSaturationAdjustment.cs" />
+    <Compile Include="Artistics\InkSketchEffect.cs" />
+    <Compile Include="Adjustments\InvertColorsEffect.cs" />
+    <Compile Include="Render\JuliaFractalEffect.cs" />
+    <Compile Include="Abstracts\LocalHistogramEffect.cs" />
+    <Compile Include="Render\MandelbrotFractalEffect.cs" />
+    <Compile Include="Noise\MedianEffect.cs" />
+    <Compile Include="Blurs\MotionBlurEffect.cs" />
+    <Compile Include="Artistics\OilPaintingEffect.cs" />
+    <Compile Include="Stylize\OutlineEffect.cs" />
+    <Compile Include="Artistics\PencilSketchEffect.cs" />
+    <Compile Include="Noise\PerlinNoise2D.cs" />
+    <Compile Include="Distort\PixelateEffect.cs" />
+    <Compile Include="Distort\PolarInversionEffect.cs" />
+    <Compile Include="Adjustments\PosterizeAdjustmentEffect.cs" />
+    <Compile Include="Blurs\RadialBlurEffect.cs" />
+    <Compile Include="Photo\RedEyeRemoveEffect.cs" />
+    <Compile Include="Noise\ReduceNoiseEffect.cs" />
+    <Compile Include="Stylize\ReliefEffect.cs" />
+    <Compile Include="Adjustments\SepiaEffect.cs" />
+    <Compile Include="Photo\SharpenEffect.cs" />
+    <Compile Include="Photo\SoftenPortraitEffect.cs" />
+    <Compile Include="Blurs\TempRotateZoomEffect.cs" />
+    <Compile Include="Distort\TileEffect.cs" />
+    <Compile Include="Distort\TwistEffect.cs" />
+    <Compile Include="Blurs\UnfocusEffect.cs" />
+    <Compile Include="Abstracts\WarpEdgeBehavior.cs" />
+    <Compile Include="Abstracts\WarpEffectBase.cs" />
+    <Compile Include="Blurs\ZoomBlurEffect.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SciImage\SciImage.csproj">
+      <Project>{e5f741c5-e3ba-458e-9fc7-712210b2e4e3}</Project>
+      <Name>SciImage</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Adjustments\BrightnessAndContrastForm.resx">
+      <DependentUpon>BrightnessAndContrastForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Adjustments\PosterizeAdjustmentForm.resx">
+      <DependentUpon>PosterizeAdjustmentForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Adjustments\HueAndSaturationForm.resx">
+      <DependentUpon>HueAndSaturationForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Artistics\PencilSketchForm.resx">
+      <DependentUpon>PencilSketchForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Artistics\OilPaintingForm.resx">
+      <DependentUpon>OilPaintingForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Artistics\InkSketchForm.resx">
+      <DependentUpon>InkSketchForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Blurs\UnfocusForm.resx">
+      <DependentUpon>UnfocusForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Blurs\TempRotateZoomForm.resx">
+      <DependentUpon>TempRotateZoomForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Blurs\RadialBlurForm.resx">
+      <DependentUpon>RadialBlurForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Blurs\MotionBlurForm.resx">
+      <DependentUpon>MotionBlurForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Blurs\GuassianBlurForm1.resx">
+      <DependentUpon>GuassianBlurForm1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Blurs\ZoomBlurForm2.resx">
+      <DependentUpon>ZoomBlurForm2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Blurs\FragmentForm3.resx">
+      <DependentUpon>FragmentForm3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Distort\BulgeForm2.resx">
+      <DependentUpon>BulgeForm2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Distort\TwistForm.resx">
+      <DependentUpon>TwistForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Distort\TileForm.resx">
+      <DependentUpon>TileForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Distort\PolarInversionForm4.resx">
+      <DependentUpon>PolarInversionForm4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Distort\FrostedGlassForm3.resx">
+      <DependentUpon>FrostedGlassForm3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Distort\PixelateForm1.resx">
+      <DependentUpon>PixelateForm1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Noise\ReduceNoiseForm.resx">
+      <DependentUpon>ReduceNoiseForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Noise\MedianForm.resx">
+      <DependentUpon>MedianForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Noise\AddNoiseForm.resx">
+      <DependentUpon>AddNoiseForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Photo\SoftenPortraitForm.resx">
+      <DependentUpon>SoftenPortraitForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Photo\RedEyeRemoveForm2.resx">
+      <DependentUpon>RedEyeRemoveForm2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Photo\GlowForm3.resx">
+      <DependentUpon>GlowForm3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Photo\SharpenForm1.resx">
+      <DependentUpon>SharpenForm1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Render\JuliaFractalForm.resx">
+      <DependentUpon>JuliaFractalForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Render\MandelbrotFractalForm.resx">
+      <DependentUpon>MandelbrotFractalForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Stylize\ReliefForm.resx">
+      <DependentUpon>ReliefForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Stylize\EmbossForm.resx">
+      <DependentUpon>EmbossForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Stylize\OutlineForm.resx">
+      <DependentUpon>OutlineForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Stylize\EdgeDetectForm.resx">
+      <DependentUpon>EdgeDetectForm.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

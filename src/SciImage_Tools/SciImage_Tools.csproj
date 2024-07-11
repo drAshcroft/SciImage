@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{766A5EF3-9484-43BA-B139-FC8A04D02628}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SciImage_Tools</RootNamespace>
+    <AssemblyName>SciImage_Tools</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DrawTools\CloneStampTool.cs" />
+    <Compile Include="ColorPickerTool.cs" />
+    <Compile Include="DrawTools\CubistTool.cs" />
+    <Compile Include="Select\EllipseSelectTool.cs" />
+    <Compile Include="ShapeTools\EllipseTool.cs" />
+    <Compile Include="DrawTools\EraserTool.cs" />
+    <Compile Include="ShapeTools\FreeformShapeTool.cs" />
+    <Compile Include="FloodTools\GradientTool.cs" />
+    <Compile Include="Select\LassoSelectTool.cs" />
+    <Compile Include="LineTools\LineProfileTool.cs" />
+    <Compile Include="Select\LineSelectTool.cs" />
+    <Compile Include="LineTools\LineTool.cs" />
+    <Compile Include="Select\MagicWandTool.cs" />
+    <Compile Include="Select\MoveSelectionTool.cs" />
+    <Compile Include="DrawTools\PaintBrushTool.cs" />
+    <Compile Include="FloodTools\PaintBucketTool.cs" />
+    <Compile Include="ViewTools\PanTool.cs" />
+    <Compile Include="DrawTools\RecoloringTool.cs" />
+    <Compile Include="Select\RectangleSelectTool.cs" />
+    <Compile Include="ShapeTools\RectangleTool.cs" />
+    <Compile Include="ShapeTools\RoundedRectangleTool.cs" />
+    <Compile Include="Select\SelectionTool.cs" />
+    <Compile Include="ShapeTools\ShapeTool.cs" />
+    <Compile Include="TextTool.cs" />
+    <Compile Include="ViewTools\ZoomTool.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SciImage\SciImage.csproj">
+      <Project>{e5f741c5-e3ba-458e-9fc7-712210b2e4e3}</Project>
+      <Name>SciImage</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
